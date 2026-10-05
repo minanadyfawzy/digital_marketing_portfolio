@@ -1,0 +1,144 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  padding: 18px 0;
+  background: rgba(11, 18, 32, 0.9);
+  backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.navbar-container {
+  width: min(1180px, 90%);
+  margin: 0 auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar-logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 11px;
+
+  color: #ffffff;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 17px;
+  font-weight: 600;
+}
+
+.logo-mark {
+  width: 34px;
+  height: 34px;
+
+  display: grid;
+  place-items: center;
+
+  background: #2563eb;
+  color: #ffffff;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  border-radius: 8px;
+}
+
+.navbar-links {
+  display: flex;
+  align-items: center;
+  gap: 34px;
+}
+
+.navbar-links > a:not(.navbar-contact) {
+  color: rgba(255, 255, 255, 0.68);
+  font-size: 13px;
+  font-weight: 500;
+
+  transition: color 0.25s ease;
+}
+
+.navbar-links > a:not(.navbar-contact):hover {
+  color: #ffffff;
+}
+
+.navbar-contact {
+  padding: 10px 17px;
+
+  background: #ffffff;
+  color: #0b1220;
+
+  border-radius: 7px;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  transition:
+    background 0.25s ease,
+    transform 0.25s ease;
+}
+
+.navbar-contact:hover {
+  background: #dbeafe;
+  transform: translateY(-1px);
+}
+
+.navbar-menu {
+  display: none;
+
+  background: transparent;
+  color: #ffffff;
+
+  cursor: pointer;
+}
+
+/* =========================
+   Responsive
+========================= */
+
+@media (max-width: 760px) {
+  .navbar {
+    padding: 15px 0;
+  }
+
+  .navbar-menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .navbar-links {
+    position: absolute;
+    top: calc(100% + 1px);
+    left: 0;
+
+    width: 100%;
+
+    display: none;
+    flex-direction: column;
+    align-items: stretch;
+
+    gap: 0;
+
+    padding: 14px 5% 20px;
+
+    background: rgba(11, 18, 32, 0.98);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+  }
+
+  .navbar-links.active {
+    display: flex;
+  }
+
+  .navbar-links > a:not(.navbar-contact) {
+    padding: 14px 0;
+    font-size: 14px;
+  }
+
+  .navbar-contact {
+    margin-top: 8px;
+    text-align: center;
+  }
+}

@@ -1,0 +1,427 @@
+.hero {
+  min-height: 720px;
+
+  display: flex;
+  align-items: center;
+
+  padding: 130px 0 90px;
+
+  background: #0b1220;
+  color: #ffffff;
+
+  overflow: hidden;
+}
+
+.hero-grid {
+  width: min(1180px, 90%);
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: 1fr 0.95fr;
+  align-items: center;
+  gap: 85px;
+}
+
+/* =========================
+   CONTENT
+========================= */
+
+.hero-content {
+  max-width: 610px;
+}
+
+.hero-eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  margin-bottom: 22px;
+
+  color: rgba(255, 255, 255, 0.5);
+
+  font-size: 9px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+
+.hero-status-dot {
+  width: 5px;
+  height: 5px;
+
+  background: #60a5fa;
+
+  border-radius: 50%;
+
+  box-shadow: 0 0 0 4px rgba(96, 165, 250, 0.08);
+}
+
+.hero h1 {
+  max-width: 620px;
+
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: clamp(48px, 5vw, 70px);
+  font-weight: 600;
+  line-height: 0.98;
+
+  letter-spacing: -3px;
+}
+
+.hero h1 span {
+  color: #60a5fa;
+}
+
+.hero-description {
+  max-width: 480px;
+
+  margin-top: 25px;
+
+  color: rgba(255, 255, 255, 0.52);
+
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+/* =========================
+   ACTIONS
+========================= */
+
+.hero-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  margin-top: 32px;
+}
+
+.hero-primary-btn,
+.hero-secondary-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+
+  min-height: 40px;
+  padding: 0 16px;
+
+  border-radius: 6px;
+
+  font-size: 11px;
+  font-weight: 600;
+
+  transition:
+    transform 0.25s ease,
+    background 0.25s ease,
+    color 0.25s ease;
+}
+
+.hero-primary-btn {
+  background: #ffffff;
+  color: #0b1220;
+}
+
+.hero-primary-btn:hover {
+  background: #dbeafe;
+  transform: translateY(-2px);
+}
+
+.hero-secondary-btn {
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.hero-secondary-btn:hover {
+  border-color: rgba(255, 255, 255, 0.3);
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+/* =========================
+   META
+========================= */
+
+.hero-meta {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+
+  margin-top: 48px;
+}
+
+.hero-meta > div:not(.hero-meta-line) {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.hero-meta strong {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 17px;
+  font-weight: 500;
+}
+
+.hero-meta span {
+  color: rgba(255, 255, 255, 0.35);
+
+  font-size: 9px;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+}
+
+.hero-meta-line {
+  width: 1px;
+  height: 28px;
+
+  background: rgba(255, 255, 255, 0.12);
+}
+
+/* =========================
+   DASHBOARD
+========================= */
+
+.hero-visual {
+  position: relative;
+}
+
+.dashboard-card {
+  position: relative;
+
+  padding: 27px;
+
+  background: #101a2d;
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 14px;
+
+  box-shadow:
+    0 30px 80px rgba(0, 0, 0, 0.25),
+    inset 0 1px 0 rgba(255, 255, 255, 0.02);
+}
+
+/* top */
+
+.dashboard-top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.dashboard-top > div:first-child {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.dashboard-top span {
+  color: rgba(255, 255, 255, 0.3);
+
+  font-size: 8px;
+  font-weight: 600;
+
+  letter-spacing: 1.2px;
+}
+
+.dashboard-top h3 {
+  color: #ffffff;
+
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.dashboard-icon {
+  width: 32px;
+  height: 32px;
+
+  display: grid;
+  place-items: center;
+
+  color: #60a5fa;
+
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 7px;
+}
+
+/* main */
+
+.dashboard-main {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+
+  margin-top: 28px;
+}
+
+.dashboard-number {
+  display: flex;
+  align-items: flex-end;
+  gap: 10px;
+}
+
+.dashboard-number strong {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 34px;
+  font-weight: 500;
+  letter-spacing: -1.5px;
+}
+
+.dashboard-number span {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+
+  margin-bottom: 6px;
+
+  color: #60a5fa;
+
+  font-size: 9px;
+  font-weight: 600;
+}
+
+.dashboard-period {
+  margin-bottom: 5px;
+
+  color: rgba(255, 255, 255, 0.28);
+
+  font-size: 9px;
+}
+
+/* chart */
+
+.chart-wrapper {
+  position: relative;
+
+  height: 190px;
+
+  margin-top: 15px;
+}
+
+.chart-grid-lines {
+  position: absolute;
+  inset: 0;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.chart-grid-lines span {
+  width: 100%;
+  height: 1px;
+
+  background: rgba(255, 255, 255, 0.055);
+}
+
+.chart-line {
+  position: absolute;
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+}
+
+.chart-line path {
+  fill: none;
+  stroke: #3b82f6;
+  stroke-width: 3;
+  stroke-linecap: round;
+}
+
+/* labels */
+
+.dashboard-labels {
+  display: flex;
+  justify-content: space-between;
+
+  margin-top: 8px;
+
+  color: rgba(255, 255, 255, 0.25);
+
+  font-size: 8px;
+}
+
+/* bottom */
+
+.dashboard-bottom {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+
+  margin-top: 24px;
+  padding-top: 20px;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.dashboard-bottom div {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.dashboard-bottom span {
+  color: rgba(255, 255, 255, 0.3);
+
+  font-size: 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.7px;
+}
+
+.dashboard-bottom strong {
+  color: #ffffff;
+
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 950px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: 60px;
+  }
+
+  .hero-content {
+    max-width: 700px;
+  }
+
+  .hero-visual {
+    max-width: 650px;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero {
+    min-height: auto;
+    padding: 110px 0 70px;
+  }
+
+  .hero h1 {
+    font-size: 45px;
+    letter-spacing: -2px;
+  }
+
+  .hero-description {
+    font-size: 12px;
+  }
+
+  .dashboard-card {
+    padding: 20px;
+  }
+
+  .dashboard-number strong {
+    font-size: 28px;
+  }
+
+  .chart-wrapper {
+    height: 150px;
+  }
+
+  .dashboard-bottom strong {
+    font-size: 13px;
+  }
+}
